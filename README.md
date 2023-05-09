@@ -10,3 +10,13 @@ SO THAT when I define my preferences I am shown a random artist and music video 
 https://developer.musixmatch.com/
 https://developers.google.com/youtube?hl=es-419
 
+## Tasks
+- [x] Create repository
+- [ ] Create html, js and pico.css files
+- [ ] Create starter code
+- [ ] Integrate API's to the functionality
+- [ ] Use frameworks to style page
+- [ ] Deploy page
+
+
+

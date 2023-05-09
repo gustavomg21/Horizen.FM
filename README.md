@@ -1,14 +1,22 @@
 # MySong
-Randomly generated songs based on prompts answered by the user 
+Introducing MySong, the ultimate destination for personalized music recommendations! Our innovative web page takes your preferences to heart and delivers the perfect song tailored just for you. With a simple and engaging interface, MySong prompts you with questions like your favorite genre of music, preferred language, and preferred nationality, allowing us to understand your unique taste and style. 
 
+Discover new tracks from artists around the world that perfectly match your musical inclinations. Experience the joy of finding your musical soulmate with MySong and let the power of personalized recommendations take your music journey to new heights! 
+- [User Story](#user-story)
+- [APIs](#apis)
+- [Tasks](#tasks)
+- [Overview](#overview)
 ## User Story
-AS A curious listener
-I WANT TO discover an artist based on my preferences
-SO THAT when I define my preferences I am shown a random artist and music video that fits those parameters.
+
+As a curious listener, I want to discover an artist based on my preferences so that when I define my preferences, I am shown a random artist and music video that fits those parameters.
 
 ## APIs
-https://developer.musixmatch.com/
-https://developers.google.com/youtube?hl=es-419
+
+To achieve personalized music recommendations, MySong utilizes the following APIs:
+
+- [Musixmatch API](https://developer.musixmatch.com/): Integrates with Musixmatch to access a vast database of songs, lyrics, and music metadata.
+- [YouTube API](https://developers.google.com/youtube?hl=es-419): Interacts with the YouTube API to fetch and display music videos matching the recommended songs.
+
 
 ## Tasks
 - [x] Create repository

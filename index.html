@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -10,14 +11,14 @@
 </head>
 
 <body>
-    <header class="container">
+ 
+    <header class="headerbg">
         <h1 class="header-title">MySong</h1>
-        <div class="grid">
+        <div class="container">
             <img src="assets/kanye1.png" alt="Logo" class="headerimg1">
         </div>
-  
     </header>
-    <main class="grid">
+    <main class="container">
         <div id="dropdowns">
             <details role="list">
                 <summary aria-haspopup="listbox">country</summary>
@@ -107,6 +108,13 @@
                 </ul>
             </details>
         </div>
+        <!-- submit choices button-->
+       
+        <button id="submit" class="btn btn-primary">Submit</button>
+        
+        <!--inject youtube video playback-->
+        <div id="player"></div>
+
     </main>
 </body>
 

@@ -4,14 +4,109 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pico.min.css">
     <title>My Song</title>
 </head>
 
 <body>
-    <main class="container">
-        <h1>My Song</h1>
-
+    <header class="container">
+        <h1 class="header-title">MySong</h1>
+        <div class="grid">
+            <img src="assets/kanye1.png" alt="Logo" class="headerimg1">
+        </div>
+  
+    </header>
+    <main class="grid">
+        <div id="dropdowns">
+            <details role="list">
+                <summary aria-haspopup="listbox">country</summary>
+                <ul role="listbox">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            USA
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Mexico
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            France
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Italy
+                        </label>
+                    </li>
+                </ul>
+            </details>
+            <details role="list">
+                <summary aria-haspopup="listbox">language</summary>
+                <ul role="listbox">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            English
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Spanish
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            French
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Italian
+                        </label>
+                    </li>
+                </ul>
+            </details>
+            <details role="list">
+                <summary aria-haspopup="listbox">genre</summary>
+                <ul role="listbox">
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Hip Hop
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Country
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Rock
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox">
+                            Banda
+                        </label>
+                    </li>
+                </ul>
+            </details>
+        </div>
     </main>
 </body>
 

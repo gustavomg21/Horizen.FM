@@ -1,1 +1,32 @@
 /* pico stylesheet */
+.container {
+    text-align: center;
+    height: 250px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #BE3455;
+    color: #fff;
+    padding: 1rem;
+  }
+  .headerimg1 {
+    background-image: url(assets/headerimg1.png);
+    height: 200px;
+    
+  }
+  .header-title {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+
+  }
+
+  #dropdowns {
+    display: flex;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  
+

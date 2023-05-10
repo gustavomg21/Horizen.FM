@@ -1,7 +1,10 @@
 /* pico stylesheet */
-.container {
+header{
+  margin-bottom: 50px;
+}
+.headerbg {
     text-align: center;
-    height: 250px;
+    height: 350px;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,12 +15,25 @@
   .headerimg1 {
     background-image: url(assets/headerimg1.png);
     height: 200px;
+    justify-content: center;
     
   }
+  /* do this later */
+  body {
+    background-image: url(assets/bg.png);
+    background-size: cover;
+    background-position: center top -450px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  
   .header-title {
     font-size: 2rem;
     margin: 0;
     text-align: center;
+    padding-bottom:20px;
 
   }
 
@@ -27,6 +43,13 @@
     padding: 10px;
     justify-content: center;
   }
+ #submit {
+  width: 20%;
+  display: flex;
+  /* center button */
+  margin: 0 auto;
+  padding: 10px;
 
+ }
   
 

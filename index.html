@@ -7,20 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pico.min.css">
+    <link rel="stylesheet" href="./assets/css/pico.colors.min.css">
     <title>My Song</title>
 </head>
 
-<body>
+<body class="pico-background-grey-250">
  
     <header class="headerbg">
-        <h1 class="header-title">MySong</h1>
+        <h1 class="header-title pico-color-zinc-900">My Song Picker</h1>
         <div class="container">
             <img src="assets/kanye1.png" alt="Logo" class="headerimg1">
         </div>
     </header>
     <main class="container">
+        <p class="pico-color-zinc-950">Please use the selectors below to determine what type of music
+            you want to listen to, then press Submit. Make at least one selection
+            for each category.
+        </p>
         <div id="dropdowns">
-            <details role="list">
+            <details role="list" class="pico-background-pumpkin-250">
                 <summary aria-haspopup="listbox">country</summary>
                 <ul role="listbox">
                     <li>
@@ -49,7 +54,7 @@
                     </li>
                 </ul>
             </details>
-            <details role="list">
+            <details role="list" class="pico-background-pumpkin-250">
                 <summary aria-haspopup="listbox">language</summary>
                 <ul role="listbox">
                     <li>
@@ -78,7 +83,7 @@
                     </li>
                 </ul>
             </details>
-            <details role="list">
+            <details role="list" class="pico-background-pumpkin-250">
                 <summary aria-haspopup="listbox">genre</summary>
                 <ul role="listbox">
                     <li>

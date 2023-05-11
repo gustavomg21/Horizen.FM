@@ -59,5 +59,9 @@ header{
   margin: 0 auto;
   padding: 10px;
  }
+ p{
+  display: flex;
+  text-align: center;
+ }
   
 

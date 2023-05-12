@@ -13,14 +13,14 @@ header{
     padding: 1rem;
   }
   .headerimg1 {
-    background-image: url(assets/headerimg1.png);
+    /*background-image: url(assets/headerimg1.png);*/
     height: 200px;
     justify-content: center;
     
   }
   /* do this later */
   body {
-    background-image: url(assets/bg.png);
+    /*background-image: url(assets/bg.png);*/
     background-size: cover;
     background-position: center top -450px;
     background-attachment: fixed;

@@ -20,11 +20,15 @@ To achieve personalized music recommendations, MySong utilizes the following API
 
 ## Tasks
 - [x] Create repository
-- [ ] Create html, js and pico.css files
-- [ ] Create starter code
-- [ ] Integrate API's to the functionality
-- [ ] Use frameworks to style page
-- [ ] Deploy page
+- [x] Create html, js and pico.css files
+- [x] Create starter code
+- [x] Integrate API's to the functionality
+- [x] Use frameworks to style page
+- [x] Deploy page
+- [ ] Finalize CSS and Pico
+- [ ] Finalize Readme
+- [ ] Deployment operational evaluation (verify api key integrity and usage)
+- [ ] Prepare presentation based on supplied doc slides
 
 ## Overview
 ![my_song_720](https://user-images.githubusercontent.com/45185442/236972430-e2cdd556-8128-444b-9fa0-ceb031d51c14.png)

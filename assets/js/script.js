@@ -1,14 +1,12 @@
 let player;
-
-// &q=${genre}&type=video&relevanceLanguage=${langCode}&regionCode=${regionCode}
-
+// function that loads the embedded player from the youtube iframe api
 function loadYouTubeAPI() {
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
-
+// determines the size of the embedded player
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '360',
@@ -22,6 +20,7 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady() {
 
 }
+
 function extractVideoId(url) {
     const regex = /[?&]([^=#]+)=([^&#]*)/g;
     let match;
@@ -43,7 +42,8 @@ let selectedValues = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     submitButton.addEventListener('click', function () {
-        let url = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyDeJe8sits_57FL7bs0JyFNoCGBpMe900w`;
+        const apikey = "AIzaSyDeJe8sits_57FL7bs0JyFNoCGBpMe900w"
+        let url = `https://www.googleapis.com/youtube/v3/search?key=${apikey}`;
         let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
         checkboxes.forEach(function (checkbox) {
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         console.log(url);
-        // player.loadVideoById(fetch(url));
 
         fetch(url)
             .then(response => {
@@ -68,8 +67,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                console.log(data.items[0].id.videoId);
+                console.log(data);
                 player.loadVideoById(data.items[0].id.videoId);
             });
     });
+    // Retrieve the saved checkbox values from localStorage
+    const savedValues = localStorage.getItem('selectedValues');
+    if (savedValues) {
+        selectedValues = JSON.parse(savedValues);
+        // Check the corresponding checkboxes based on the saved values
+        selectedValues.forEach(value => {
+            const checkbox = document.querySelector(`input[value="${value}"]`);
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+    }
+
+});
+// Save the selected checkbox values to localStorage when a checkbox is clicked
+document.addEventListener('change', function (event) {
+    if (event.target.matches('input[type="checkbox"]')) {
+        selectedValues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+            .map(checkbox => checkbox.value);
+        localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
+    }
 });

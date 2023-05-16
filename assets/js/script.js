@@ -98,6 +98,7 @@ document.addEventListener('change', function (event) {
 });
 
 let unsplashApi = "5nKmn5B6ZGiuWslMAID0LAGwtdxXeDr6dsNIWWOI6q4"
+document.body.setAttribute('id', 'background-container');
 
 async function fetchAndSetBackground() {
     const selectedValues = localStorage.getItem('selectedValues');
@@ -106,7 +107,7 @@ async function fetchAndSetBackground() {
     const data = await response.json();
     console.log(data);
     const imageUrl = data.results[0].urls.regular;
-    document.body.style.backgroundImage = `url(${imageUrl})`;
+    document.getElementById('background-container').style.backgroundImage = `url(${imageUrl})`;
 }
 
 fetchAndSetBackground();

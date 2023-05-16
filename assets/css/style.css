@@ -30,6 +30,7 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  background-color: #BE3455;
 }
 
 .header-title {
@@ -78,4 +79,12 @@ p {
   #player {
     width: 80%;
   }
+}
+
+#background-container {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

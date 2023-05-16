@@ -93,3 +93,16 @@ document.addEventListener('change', function (event) {
         localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
     }
 });
+
+let unsplashApi = "5nKmn5B6ZGiuWslMAID0LAGwtdxXeDr6dsNIWWOI6q4"
+
+async function fetchAndSetBackground() {
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=beach&per_page=20&client_id=${unsplashApi}`, {
+    });
+    const data = await response.json();
+    console.log(data);
+    const imageUrl = data.results[0].urls.regular;
+    document.body.style.backgroundImage = `url(${imageUrl})`;
+}
+
+fetchAndSetBackground();

@@ -8,9 +8,12 @@ function loadYouTubeAPI() {
 }
 // determines the size of the embedded player
 function onYouTubeIframeAPIReady() {
+    const playerContainer = document.getElementById('player');
+    const containerWidth = playerContainer.clientWidth;
+    const containerHeight = containerWidth * 9 / 16;
     player = new YT.Player('player', {
-        height: '360',
-        width: '640',
+        height: containerHeight,
+        width: containerWidth,
         events: {
             onReady: onPlayerReady
         }
@@ -97,7 +100,8 @@ document.addEventListener('change', function (event) {
 let unsplashApi = "5nKmn5B6ZGiuWslMAID0LAGwtdxXeDr6dsNIWWOI6q4"
 
 async function fetchAndSetBackground() {
-    const response = await fetch(`https://api.unsplash.com/search/photos?query=beach&per_page=20&client_id=${unsplashApi}`, {
+    const selectedValues = localStorage.getItem('selectedValues');
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=music&per_page=20&client_id=${unsplashApi}`, {
     });
     const data = await response.json();
     console.log(data);

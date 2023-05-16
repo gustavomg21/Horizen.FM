@@ -5,7 +5,7 @@ header {
 
 .headerbg {
   text-align: center;
-  height: 350px;
+  height: 400px;
   top: 0;
   left: 0;
   width: 100%;
@@ -18,12 +18,12 @@ header {
   /*background-image: url(assets/headerimg1.png);*/
   height: 200px;
   justify-content: center;
+  padding-bottom: 5px;
 
 }
 
 /* do this later */
 body {
-  /*background-image: url(assets/bg.png);*/
   background-size: cover;
   background-position: center top -450px;
   background-attachment: fixed;
@@ -67,4 +67,15 @@ body {
 p {
   display: flex;
   text-align: center;
+}
+
+#player {
+  width: 80%;
+
+}
+
+@media (max-width: 768px) {
+  #player {
+    width: 80%;
+  }
 }

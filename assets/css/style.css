@@ -41,6 +41,19 @@ body {
 
 }
 
+h1 {
+  filter: drop-shadow(0px 25px 10px white)
+}
+
+h1 span {
+  background-color: #fff;
+
+}
+
+.zen {
+  color: #BE3455
+}
+
 #dropdowns {
   display: flex;
   grid-gap: 10px;

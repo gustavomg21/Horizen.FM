@@ -40,6 +40,15 @@ function playVideo() {
     player.loadVideoById(videoId);
 
 }
+
+// selects a random integer
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
 let submitButton = document.getElementById('submit');
 let selectedValues = [];
 
@@ -71,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 console.log(data);
-                player.loadVideoById(data.items[0].id.videoId);
+                var randomer = getRandomInt(0, data.items.length);
+                player.loadVideoById(data.items[randomer].id.videoId);
             });
     });
     // Retrieve the saved checkbox values from localStorage

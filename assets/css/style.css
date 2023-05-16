@@ -1,67 +1,70 @@
 /* pico stylesheet */
-header{
+header {
   margin-bottom: 50px;
 }
+
 .headerbg {
-    text-align: center;
-    height: 350px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #BE3455;
-    color: #fff;
-    padding: 1rem;
-  }
-  .headerimg1 {
-    /*background-image: url(assets/headerimg1.png);*/
-    height: 200px;
-    justify-content: center;
-    
-  }
-  /* do this later */
-  body {
-    /*background-image: url(assets/bg.png);*/
-    background-size: cover;
-    background-position: center top -450px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .header-title {
-    font-size: 2rem;
-    margin: 0;
-    text-align: center;
-    padding-bottom:20px;
+  text-align: center;
+  height: 350px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #BE3455;
+  color: #fff;
+  padding: 1rem;
+}
 
-  }
+.headerimg1 {
+  /*background-image: url(assets/headerimg1.png);*/
+  height: 200px;
+  justify-content: center;
 
-  #dropdowns {
-    display: flex;
-    grid-gap: 10px;
-    padding: 10px;
-    justify-content: center;
-  }
- #submit {
+}
+
+/* do this later */
+body {
+  /*background-image: url(assets/bg.png);*/
+  background-size: cover;
+  background-position: center top -450px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+
+#dropdowns {
+  display: flex;
+  grid-gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+#submit {
   width: 20%;
   display: flex;
   /* center button */
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-   padding: 20px;
+  padding: 20px;
 
- }
- 
- #player {
+}
+
+#player {
   display: flex;
   margin: 0 auto;
   padding: 10px;
- }
- p{
+}
+
+p {
   display: flex;
   text-align: center;
- }
-  
-
+}

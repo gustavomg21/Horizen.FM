@@ -5,7 +5,7 @@ header {
 
 .headerbg {
   text-align: center;
-  height: 400px;
+  height: 450px;
   top: 0;
   left: 0;
   width: 100%;
@@ -91,6 +91,9 @@ p {
 @media (max-width: 768px) {
   #player {
     width: 80%;
+  }
+  .headerbg{
+    height: 500px;
   }
 }
 

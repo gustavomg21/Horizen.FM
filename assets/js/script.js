@@ -84,28 +84,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 player.loadVideoById(data.items[randomer].id.videoId);
             });
     });
-    // Retrieve the saved checkbox values from localStorage
-    const savedValues = localStorage.getItem('selectedValues');
-    if (savedValues) {
-        selectedValues = JSON.parse(savedValues);
-        // Check the corresponding checkboxes based on the saved values
-        selectedValues.forEach(value => {
-            const checkbox = document.querySelector(`input[value="${value}"]`);
-            if (checkbox) {
-                checkbox.checked = true;
-            }
-        });
-    }
-
-});
-// Save the selected checkbox values to localStorage when a checkbox is clicked
-document.addEventListener('change', function (event) {
-    if (event.target.matches('input[type="checkbox"]')) {
-        selectedValues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
-            .map(checkbox => checkbox.value);
-        localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
-    }
-});
+      // Get the saved checkbox values from localStorage
+      const savedValues = localStorage.getItem('selectedValues');
+      // if there are ANY checkmarks
+      if (savedValues) {
+          // this converts the JSON of the saved checks into a JS object
+          selectedValues = JSON.parse(savedValues);
+          // Check the corresponding checkboxes based on the saved values
+          selectedValues.forEach(value => {
+              const checkbox = document.querySelector(`input[value="${value}"]`);
+              if (checkbox) {
+                  // makes sure to that the set checkboxes are definitley set to true
+                  checkbox.checked = true;
+              }
+          });
+      }
+  
+  });
+  // Listens for a checkbox 'click' and saves to localStorage 
+  document.addEventListener('change', function (event) {
+      // if input is a checkbox
+      if (event.target.matches('input[type="checkbox"]')) {
+          // basically creates an array of all the checkboxes that have been checked
+          selectedValues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+          // .map is used because it will remember the order
+          .map(checkbox => checkbox.value);
+          // converts the selected boxes to a JSON string
+          localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
+      }
+  });
 
 let unsplashApi = "5nKmn5B6ZGiuWslMAID0LAGwtdxXeDr6dsNIWWOI6q4"
 document.body.setAttribute('id', 'background-container');

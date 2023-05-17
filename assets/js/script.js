@@ -58,7 +58,7 @@ let selectedValues = [];
 // add event listener
 document.addEventListener('DOMContentLoaded', function () {
     submitButton.addEventListener('click', function () { // this code adds an event listener to a submit button, triggering the callback function when the button is clicked.
-        const apikey = "AIzaSyDeJe8sits_57FL7bs0JyFNoCGBpMe900w"
+        const apikey = "AIzaSyDqDkFIMSCb4LEPC7FRPe6DIPGM3UX0BAM"
         let url = `https://www.googleapis.com/youtube/v3/search?key=${apikey}`;
         let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked'); // this line retrieves all the checked checkboxes with the type 'checkbox' from the document and assigns them to the 'checkboxes' variable.
 

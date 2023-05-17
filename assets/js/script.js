@@ -1,4 +1,5 @@
 let player;
+let currentVideoIndex = 0;
 // create new '<script>' element, sets its source to the youtube iframe api url, inserts it into the DOM
 function loadYouTubeAPI() {
     const tag = document.createElement('script'); // this line creates a new '<script>' element and assigns it to the variable 'tag'. this element will be used to load the youtube iframe api.

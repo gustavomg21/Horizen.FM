@@ -29,9 +29,9 @@ To achieve personalized music recommendations, MySong utilizes the following API
 - [x] Use frameworks to style page
 - [x] Deploy page
 - [x] Finalize CSS and Pico
-- [ ] Finalize Readme
-- [ ] Deployment operational evaluation (verify API key integrity and usage)
-- [ ] Prepare presentation based on supplied doc slides
+- [x] Finalize Readme
+- [x] Deployment operational evaluation (verify API key integrity and usage)
+- [x] Prepare presentation based on supplied doc slides
 
 ## Overview
 ![image](https://github.com/gustavomg21/Horizen.FM/assets/45185442/b3d69e75-7137-478d-a89e-ffb3e323b58f)
@@ -55,5 +55,3 @@ Horizen.FM acknowledges the contributions of the following individuals:
 - Kevin Huffman
 - Phillip Walker
 - Gustavo Murillo Gonzalez
-- stack overflow
-- chatgpt

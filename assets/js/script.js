@@ -35,26 +35,6 @@ function onPlayerReady() {
     const videoId = selectedValues[currentVideoIndex];
     player.loadVideoById(videoId);
     player.playVideo();
-
-    // Add event listener for the 'onStateChange' event
-    player.addEventListener('onStateChange', function (event) {
-        if (event.data === YT.PlayerState.ENDED) {
-            playNextVideo();
-        } else if (event.data === YT.PlayerState.PLAYING) {
-            setTimeout(playNextVideo, 5000); // Autoplay next video after 5 seconds 
-        }
-    });
-}
-
-
-// Play the next video in the playlist
-function playNextVideo() {
-    currentVideoIndex++;
-    if (currentVideoIndex < selectedValues.length) {
-        const videoId = selectedValues[currentVideoIndex];
-        player.loadVideoById(videoId);
-        player.playVideo();
-    }
 }
 
 // Extract the video ID from a YouTube URL

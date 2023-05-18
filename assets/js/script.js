@@ -1,6 +1,6 @@
 let player;
-
-// Create new '<script>' element, set its source to the YouTube iframe API URL, insert it into the DOM
+let currentVideoIndex = 0;
+// create new '<script>' element, sets its source to the youtube iframe api url, inserts it into the DOM
 function loadYouTubeAPI() {
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
@@ -23,6 +23,13 @@ function onYouTubeIframeAPIReady() {
 }
 
 // Handle when the YouTube player is ready
+// selects a random integer
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
 function onPlayerReady() {
     currentVideoIndex++;
     const videoId = selectedValues[currentVideoIndex];
@@ -67,6 +74,10 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
+function playVideo() {
+};
+
+
 }
 
 let submitButton = document.getElementById('submit');
@@ -74,8 +85,8 @@ let selectedValues = [];
 
 // Add event listener
 document.addEventListener('DOMContentLoaded', function () {
-    submitButton.addEventListener('click', function () {
-        const apikey = "YOUR_YOUTUBE_API_KEY";
+    submitButton.addEventListener('click', function () { // this code adds an event listener to a submit button, triggering the callback function when the button is clicked.
+        const apikey = "AIzaSyDqDkFIMSCb4LEPC7FRPe6DIPGM3UX0BAM"
         let url = `https://www.googleapis.com/youtube/v3/search?key=${apikey}`;
         let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
